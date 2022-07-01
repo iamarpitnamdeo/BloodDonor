@@ -64,9 +64,9 @@ public class controller {
 		return bloodDonorService.getUserByEmail(email);
 	}
 	@GetMapping("/getUserByBgNdState/{bloodGroup}/{state}")
-	@ResponseBody
-	public List<BloodDonor> getUserByBgNdState(@PathVariable String bloodGroup,@PathVariable String state){
-		return bloodDonorService.getUserBYBgNdState(bloodGroup, state);
+	public String getUserByBgNdState(@PathVariable String bloodGroup,@PathVariable String state,Model model){
+		model.addAttribute("bloodBank",bloodDonorService.getUserBYBgNdState(bloodGroup, state));
+		return "BestMatchResult";
 	}
 	@GetMapping("/getUserByBg/{bloodGroup}")
 	@ResponseBody

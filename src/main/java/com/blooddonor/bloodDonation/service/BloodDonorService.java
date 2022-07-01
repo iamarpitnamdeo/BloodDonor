@@ -19,7 +19,10 @@ public class BloodDonorService {
 	@PostConstruct
 	public void initDb() {
 		List<BloodDonor> users = new ArrayList<>();
-		users.add(new BloodDonor("Ram", "Narayan", "ram@gmail.com","1234567890","NA","B+","India", "Madhya Pradesh", "Jabalpur"));
+		users.add(new BloodDonor("Vivek", "Narayan", "ram@gmail.com","1234567890","NA","B+","India", "Madhya Pradesh", "Jabalpur"));
+		users.add(new BloodDonor("Ghanshyam", "Ram", "shyam@gmail.com","1234567891","NA","B+","India", "Goa", "City"));
+		users.add(new BloodDonor("Ghanshyam", "Ram", "shyam@gmail.com","1234567891","NA","B+","India", "Goa", "City"));
+		users.add(new BloodDonor("Ghanshyam", "Ram", "shyam@gmail.com","1234567891","NA","B+","India", "Goa", "City"));
 		users.add(new BloodDonor("Ghanshyam", "Ram", "shyam@gmail.com","1234567891","NA","B+","India", "Madhya Pradesh", "City"));
 		users.add(new BloodDonor("Natasha", "Romenoff", "rmnof@shield.com","1234567894","NA","B+","Country", "State", "City"));
 		bloodDonorRepository.saveAll(users);

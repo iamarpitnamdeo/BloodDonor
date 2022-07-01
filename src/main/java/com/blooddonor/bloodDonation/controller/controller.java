@@ -46,14 +46,16 @@ public class controller {
 		}
 		else{
 			return "fail";
-		}
-		
-		
+		}		
 	}
 	@GetMapping("/getUsers")
 	public String getAllUsers(Model model){
 		model.addAttribute("bloodBank",bloodDonorService.getUsers());  
 		 return "BloodBank";
+	}
+	@GetMapping("/getBestMatch")
+	public String showSearchForm(){
+		 return "BestMatch";
 	}
 	
 	@GetMapping("/getUserByEmail/{email}")
